@@ -234,6 +234,7 @@ void handle_client(int client_socket) {
     server_addr.sin_port = htons(80); // Puerto HTTP estándar
     inet_pton(AF_INET, SERVERS[current_server_index], &server_addr.sin_addr);
 
+    current_server_index = (current_server_index + 1) % NUM_SERVERS;
     // Conectarse al servidor web de destino
     if (connect(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr)) < 0) {
         perror("Error al conectarse al servidor web de destino");
