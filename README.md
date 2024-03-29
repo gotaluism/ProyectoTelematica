@@ -38,6 +38,6 @@ El proyecto ha permitido adquirir conocimientos sólidos en el diseño y desarro
 
 
 ### Autores
-•Luis Miguel Giraldo Gonzalez
-•Vanessa Vélez Restrepo
-•Santiago Arias Higuita
+* **Luis Miguel Giraldo Gonzalez**  - [SantiagoArias229](https://github.com/SantiagoArias229)
+* **Vanessa Vélez Restrepo** - [vavelezr](https://github.com/vavelezr)
+* **Santiago Arias Higuita** - [gotaluism](https://github.com/gotaluism)
