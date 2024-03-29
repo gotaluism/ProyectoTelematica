@@ -6,11 +6,11 @@ El objetivo de este proyecto es implementar un proxy inverso para HTTP y un bala
 ## Desarrollo 💻 🔧
 ### Servidor HTTP Proxy + Balanceador de Carga
 El servidor se encarga de interceptar las peticiones de los clientes, reenviarlas a servidores destino seleccionados mediante el algoritmo de Round Robin, procesar las respuestas y retornarlas a los clientes. Se han implementado los siguientes aspectos:
-•	Escucha peticiones en el puerto 8080 y procesa solicitudes HTTP/1.1.
-•	Implementa los métodos GET y HEAD.
-•	Modifica las peticiones para enviarlas al servidor destino de forma adecuada.
-•	Implementa un archivo de log para registrar todas las peticiones y respuestas.
-•	Permite la caché de recursos solicitados por los clientes, almacenándolos en disco y estableciendo un Time To Live (TTL) configurable.
+* Escucha peticiones en el puerto 8080 y procesa solicitudes HTTP/1.1.
+*	Implementa los métodos GET y HEAD.
+*	Modifica las peticiones para enviarlas al servidor destino de forma adecuada.
+*	Implementa un archivo de log para registrar todas las peticiones y respuestas.
+*	Permite la caché de recursos solicitados por los clientes, almacenándolos en disco y estableciendo un Time To Live (TTL) configurable.
 Se ejecuta de la siguiente forma: 
 ```
 ./servidor 8080 proxy_log.txt
@@ -26,9 +26,9 @@ La aplicación cliente puede realizar peticiones utilizando los métodos GET, HE
 Ofrece la funcionalidad de caché de recursos solicitados, con la capacidad de eliminar completamente el caché mediante el comando flush.
 ## Aspectos Logrados y No Logrados
 ### Aspectos Logrados : ✔️
-•	Implementación funcional del servidor HTTP Proxy + Balanceador de Carga y la aplicación cliente. 
-•	Cumplimiento de los requisitos especificados, incluyendo el procesamiento de solicitudes HTTP/1.1, la implementación de métodos GET y HEAD, la modificación de las peticiones para enviar el encabezado pedido, la caché de recursos, archivo log y mensajes con código de estado.
-•	Implementación completa de la aplicación cliente con todos sus requerimientos, log, caché, uso de métodos de GET, HEAD e implementación de método POST, comando flush.
+*	Implementación funcional del servidor HTTP Proxy + Balanceador de Carga y la aplicación cliente. 
+*	Cumplimiento de los requisitos especificados, incluyendo el procesamiento de solicitudes HTTP/1.1, la implementación de métodos GET y HEAD, la modificación de las peticiones para enviar el encabezado pedido, la caché de recursos, archivo log y mensajes con código de estado.
+*	Implementación completa de la aplicación cliente con todos sus requerimientos, log, caché, uso de métodos de GET, HEAD e implementación de método POST, comando flush.
 
 ### Aspectos No Logrados : ❌
 
