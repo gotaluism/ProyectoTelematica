@@ -35,7 +35,11 @@ Ofrece la funcionalidad de caché de recursos solicitados, con la capacidad de e
 ## Conclusiones
 El proyecto ha permitido adquirir conocimientos sólidos en el diseño y desarrollo de aplicaciones concurrentes en red, así como en el manejo de peticiones HTTP y la implementación de servidores proxy y balanceadores de carga. Se han alcanzado los objetivos principales del proyecto, aunque quedan algunos aspectos fueron complicados de desarrollar puesto el impedimento que teníamos respecto al uso de algunas librerías.
 
-
+##Referencias
+*(https://www.youtube.com/watch?v=eshV2whJrqk)
+*(https://www.youtube.com/watch?v=vF3TS4U6I_M)
+*(https://www.youtube.com/watch?v=VEr-Gp86teY)
+*(https://www.cloudflare.com/es-es/learning/dns/glossary/round-robin-dns/)
 
 ### Autores
 * **Luis Miguel Giraldo Gonzalez**  - [SantiagoArias229](https://github.com/SantiagoArias229)
