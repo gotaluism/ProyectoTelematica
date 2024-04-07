@@ -16,7 +16,11 @@ Se ejecuta de la siguiente forma:
 ./servidor 8080 proxy_log.txt
 ```
 ## Flujo
-![Diagrama-flujo-telematica-drawio.png](https://postimg.cc/rD6vXLS0)
+
+
+![Diagrama flujo telematica drawio](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/92fb3079-6249-4685-a67b-9ecd1448f9a2)
+
+
 
 ### Aplicación Cliente HTTP
 La aplicación cliente permite realizar peticiones HTTP a cualquier servidor HTTP, incluido el servidor HTTP Proxy + Balanceador de Carga. Se ejecuta de la siguiente forma: 
