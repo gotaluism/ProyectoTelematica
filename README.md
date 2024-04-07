@@ -3,6 +3,9 @@
 ## Introducción
 El objetivo de este proyecto es implementar un proxy inverso para HTTP y un balanceador de carga utilizando la API Sockets, además de esto la implementación de una aplicación cliente y de 3 servidores web. De modo que el cliente se conecta con el proxy, el proxy inverso intercepta las peticiones de los clientes y las reenvía a servidores capaces de procesarlas, mientras que el balanceador de carga distribuye las peticiones entrantes entre un conjunto de servidores, mejorando así la eficiencia y disponibilidad del sistema. Es importante aclarar que el balanceo de carga se hace por medio del algoritmo de Round Robin.
 
+## Flujo
+![Diagrama flujo telematica drawio](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/92fb3079-6249-4685-a67b-9ecd1448f9a2)
+
 ## Desarrollo 💻 🔧
 ### Servidor HTTP Proxy + Balanceador de Carga
 El servidor se encarga de interceptar las peticiones de los clientes, reenviarlas a servidores destino seleccionados mediante el algoritmo de Round Robin, procesar las respuestas y retornarlas a los clientes. Se han implementado los siguientes aspectos:
@@ -15,12 +18,6 @@ Se ejecuta de la siguiente forma:
 ```
 ./servidor 8080 proxy_log.txt
 ```
-## Flujo
-
-
-![Diagrama flujo telematica drawio](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/92fb3079-6249-4685-a67b-9ecd1448f9a2)
-
-
 
 ### Aplicación Cliente HTTP
 La aplicación cliente permite realizar peticiones HTTP a cualquier servidor HTTP, incluido el servidor HTTP Proxy + Balanceador de Carga. Se ejecuta de la siguiente forma: 
@@ -31,11 +28,25 @@ url: url del recurso que deseamos solicitar
 Permite registrar todas las peticiones realizadas en un archivo de log, que incluye información sobre la fecha, hora, tipo de solicitud HTTP y respuesta recibida del servidor/proxy. 
 La aplicación cliente puede realizar peticiones utilizando los métodos GET, HEAD y POST.
 Ofrece la funcionalidad de caché de recursos solicitados, con la capacidad de eliminar completamente el caché mediante el comando flush.
+
+### Servidores Web
+Los servidores web se realizaron con Apache, cada servidor tiene una pagina estatica en la cual hay un identificador con el cual se reconoce cual de los 3 servidores web es.
+El servidor proxy es el que se encarga de redireccionar a uno de los 3 servidores web, no obstante si deseas acceder a uno de los servidores web por aparte, puedes copiar la siguiente dirección en el buscador de tu preferencia.
+```
+ipPublicaDeUnoDeLosServidoresWeb/test/testt.html
+```
+Ejemplo
+
+Recuerda previamente haber prendido el servidor web en el aws 
+
+
 ## Aspectos Logrados y No Logrados
 ### Aspectos Logrados : ✔️
 *	Implementación funcional del servidor HTTP Proxy + Balanceador de Carga y la aplicación cliente. 
 *	Cumplimiento de los requisitos especificados, incluyendo el procesamiento de solicitudes HTTP/1.1, la implementación de métodos GET y HEAD, la modificación de las peticiones para enviar el encabezado pedido, la caché de recursos, archivo log y mensajes con código de estado.
 *	Implementación completa de la aplicación cliente con todos sus requerimientos, log, caché, uso de métodos de GET, HEAD e implementación de método POST, comando flush.
+
+### Servidor HTTP Proxy + Balanceador de Carga
 
 ### Aspectos No Logrados : ❌
 
@@ -49,6 +60,6 @@ El proyecto ha permitido adquirir conocimientos sólidos en el diseño y desarro
 * (https://www.cloudflare.com/es-es/learning/dns/glossary/round-robin-dns/)
 
 ### Autores
-* **Luis Miguel Giraldo Gonzalez**  - [SantiagoArias229](https://github.com/SantiagoArias229)
+* **Luis Miguel Giraldo Gonzalez**  - [gotaluism](https://github.com/gotaluism)
 * **Vanessa Vélez Restrepo** - [vavelezr](https://github.com/vavelezr)
-* **Santiago Arias Higuita** - [gotaluism](https://github.com/gotaluism)
+* **Santiago Arias Higuita** - [SantiagoArias229](https://github.com/SantiagoArias229)
