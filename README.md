@@ -16,7 +16,7 @@ El servidor se encarga de interceptar las peticiones de los clientes, reenviarla
 *	Permite la caché de recursos solicitados por los clientes, almacenándolos en disco y estableciendo un Time To Live (TTL) configurable.
 Se ejecuta de la siguiente forma: 
 ```
-./servidor 8080 proxy_log.txt
+./servidor 
 ```
 
 ### Aplicación Cliente HTTP
@@ -43,10 +43,14 @@ Recuerda previamente haber prendido el servidor web en el aws
 ## Aspectos Logrados y No Logrados
 ### Aspectos Logrados : ✔️
 *	Implementación funcional del servidor HTTP Proxy + Balanceador de Carga y la aplicación cliente. 
-*	Cumplimiento de los requisitos especificados, incluyendo el procesamiento de solicitudes HTTP/1.1, la implementación de métodos GET y HEAD, la modificación de las peticiones para enviar el encabezado pedido, la caché de recursos, archivo log y mensajes con código de estado.
+*	Cumplimiento de los requisitos especificados, incluyendo el procesamiento de solicitudes HTTP/1.1, la implementación de métodos GET y HEAD y la modificación de las peticiones para enviar el encabezado pedido.
+* Implementación del caché (verifica primero si la respuesta está en el caché y si está devuelve esa)
+* Implementación del archivo log en donde se almacenan las solicitudes y las respuestas
+* Mensajes con código de estado (error 500 en caso de solicitar un método no implementado)
+* Uso del algoritmo Round Robin para el balanceo de carga
 *	Implementación completa de la aplicación cliente con todos sus requerimientos, log, caché, uso de métodos de GET, HEAD e implementación de método POST, comando flush.
 
-### Servidor HTTP Proxy + Balanceador de Carga
+
 
 ### Aspectos No Logrados : ❌
 
