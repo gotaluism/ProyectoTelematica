@@ -37,6 +37,7 @@ ipPublicaDeUnoDeLosServidoresWeb/test/testt.html
 ```
 Ejemplo
 
+![Captura de pantalla 2024-04-08 150519](https://github.com/gotaluism/ProyectoTelematica/assets/76192117/4c9c035a-8cf2-4296-b689-79f56a6c6e91)
 Recuerda previamente haber prendido el servidor web en el aws 
 
 
