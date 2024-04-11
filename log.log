@@ -1,0 +1,233 @@
+2024-04-08 07:49:06 HTTP Request: GET https://itcorp.com/ Filename: index.html ContentType:  HTTP Response: <HTML>
+<HEAD>
+<TITLE>ITcorp.com</TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<H1>Interrupt Technology Corporation</H1>
+</CENTER>
+
+<P>
+This is the home page of Interrupt Technology Corporation. If you are
+looking for another company that calls itself "ITcorp", you'll have to
+try typing the company's full name into a search engine.
+
+<H2>What Do We Do?</H2>
+
+<P>
+We are a small, privately held software consulting firm specializing
+in file systems, storage systems, and computer measurement. We also
+provide expert-witness services in those areas. If you have a need for
+our services, you may contact itcorp at itcorp.com (replacing the "at"
+with an @ sign).
+
+<H2>Why Is This Web Page So Plain?</H2>
+
+<P>
+We do not actively seek outside business. This Web page exists primarily
+to satisfy the needs of those who expect every domain to have a Web
+presence.
+
+</BODY>
+</HTML>
+
+2024-04-08 07:49:19 HTTP Request: GET https://itcorp.com/ Filename: index.html ContentType: text/html HTTP Response: HTTP/1.1 200 OK
+Date: Mon, 08 Apr 2024 12:49:17 GMT
+Server: Apache/2.4.51 (Linux/SUSE)
+Last-Modified: Sat, 20 Dec 2014 12:44:12 GMT
+ETag: "35b-50aa52ea9f4dc"
+Accept-Ranges: bytes
+Content-Length: 859
+Connection: close
+Content-Type: text/html
+
+<HTML>
+<HEAD>
+<TITLE>ITcorp.com</TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<H1>Interrupt Technology Corporation</H1>
+</CENTER>
+
+<P>
+This is the home page of Interrupt Technology Corporation. If you are
+looking for another company that calls itself "ITcorp", you'll have to
+try typing the company's full name into a search engine.
+
+<H2>What Do We Do?</H2>
+
+<P>
+We are a small, privately held software consulting firm specializing
+in file systems, storage systems, and computer measurement. We also
+provide expert-witness services in those areas. If you have a need for
+our services, you may contact itcorp at itcorp.com (replacing the "at"
+with an @ sign).
+
+<H2>Why Is This Web Page So Plain?</H2>
+
+<P>
+We do not actively seek outside business. This Web page exists primarily
+to satisfy the needs of those who expect every domain to have a Web
+presence.
+
+</BODY>
+</HTML>
+
+2024-04-08 07:59:03 HTTP Request: GET https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.es%2Fpin%2F313000242862288913%2F&psig=AOvVaw1Ce9wFCc8ftxwy7j_qOnFV&ust=1712667222099000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCq9t3UsoUDFQAAAAAdAAAAABAR Filename: urlsa=i&url=httpswww.pinterest.espin313000242862288913&psig=AOvVaw1Ce9wFCc8ftxwy7j_qOnFV&ust=1712667222099000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCq9t3UsoUDFQAAAAAdAAAAABAR ContentType: text/html; charset=ISO-8859-1 HTTP Response: HTTP/1.1 200 OK
+Date: Mon, 08 Apr 2024 12:59:01 GMT
+Pragma: no-cache
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+Cache-Control: no-cache, must-revalidate
+Content-Type: text/html; charset=ISO-8859-1
+Content-Security-Policy: object-src 'none';base-uri 'self';script-src 'nonce--G1VLJ8cz4_2w5MMomUj1w' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Server: gws
+X-XSS-Protection: 0
+Set-Cookie: NID=513=Yzd20cVoJWXvE1RwfboTeAVE_H4O8tBEgErMh8Tg-X7iwoET8qXjTpFsBL7vnTgN0LOJKv8neAh2SyBXAammA3ZceqGrZoklET-yvfub7Y91b2Vp9H_MVZp5QSNxohd0KGx49aqRn6KEneITriqAMgsbs3iFnl0SHQ_z7N0jsH8; expires=Tue, 08-Oct-2024 12:59:01 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Accept-Ranges: none
+Vary: Accept-Encoding
+Connection: close
+Transfer-Encoding: chunked
+
+5df
+<html lang="es-419"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Aviso de redireccionamiento</title><style>body,div,a{font-family:arial,sans-serif}body{background-color:#fff;margin-top:3px}div{color:#000}a:link{color:#4b11a8;}a:visited{color:#4b11a8;}a:active{color:#ea4335}div.mymGo{border-top:1px solid #dadce0;border-bottom:1px solid #dadce0;background:#f8f9fa;margin-top:1em;width:100%}div.aXgaGb{padding:0.5em 0;margin-left:10px}div.fTk7vd{margin-left:35px;margin-top:35px}</style></head><body><div class="mymGo"><div class="aXgaGb"><font style="font-size:larger"><b>Aviso de redireccionamiento</b></font></div></div><div class="fTk7vd">&nbsp;La pgina anterior te enva a <a href="https://www.pinterest.es/pin/313000242862288913/">https://www.pinterest.es/pin/313000242862288913/</a>.<br><br>&nbsp;Si no deseas visitar esa pgina, puedes <a href="#" id="tsuid_1">regresar a la pgina anterior</a>.<script nonce="-G1VLJ8cz4_2w5MMomUj1w">(function(){var id='tsuid_1';(function(){document.getElementById(id).onclick=function(){window.history.back();return!1};}).call(this);})();(function(){var id='tsuid_1';var ct='originlink';var oi='unauthorizedredirect';(function(){document.getElementById(id).onmousedown=function(){var b=document&&document.referrer,a="encodeURIComponent"in window?encodeURIComponent:escape,c="";b&&(c=a(b));(new Image).src="/url?sa=T&url="+c+"&oi="+a(oi)+"&ct="+a(ct);return!1};}).call(this);})();</script><br><br><br></div></body></html>
+0
+
+
+2024-04-08 08:01:23 HTTP Request: GET https://w7.pngwing.com/pngs/118/687/png-transparent-smiley-emoticon-emoji-happiness-emoticon-smiley-emoji-love-computer-icons-text-messaging.png Filename: png-transparent-smiley-emoticon-emoji-happiness-emoticon-smiley-emoji-love-computer-icons-text-messaging.png ContentType: image/png HTTP Response: BINARY CONTENT
+2024-04-08 08:03:11 HTTP Request: GET https://ministeriodeeducacion.gob.do/docs/biblioteca-virtual/4tXN-heidegger-martin-que-es-la-filosofiapdf.pdf Filename: 4tXN-heidegger-martin-que-es-la-filosofiapdf.pdf ContentType: application/pdf HTTP Response: BINARY CONTENT
+2024-04-08 08:31:37 HTTP Request: HEAD http://18.235.48.199:8080/test/testt.html Filename: testt.html ContentType: text/html HTTP Response: HTTP/1.1 200 OK
+Date: Mon, 08 Apr 2024 13:31:35 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Last-Modified: Thu, 28 Mar 2024 16:11:47 GMT
+ETag: "117-614bac7b4c6ad"
+Accept-Ranges:  none
+Content-Length: 279
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+
+
+2024-04-08 08:33:47 HTTP Request: GET http://18.235.48.199:8080/test/testt.html Filename: testt.html ContentType: text/html HTTP Response: HTTP/1.1 200 OK
+Date: Mon, 08 Apr 2024 13:33:45 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Last-Modified: Thu, 28 Mar 2024 16:12:16 GMT
+ETag: "117-614bac978dcbf"
+Accept-Ranges:  none
+Content-Length: 279
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Servidor Web Apache</title>
+</head>
+<body>
+<h2>Bienvenidos al proyecto final de telematica 3</h2>
+<h3>Hecho por:</h3>
+<h4>Luis Miguel Giraldo</h4>
+<h4>Vanesa Velez</h4>
+<h4>Santiago Arias</h4>
+</body>
+</html>
+
+2024-04-10 19:13:14 HTTP Request: GET http://18.235.48.199:8080/test/testt.html Filename: testt.html ContentType: text/html HTTP Response: HTTP/1.1 200 OK
+Date: Thu, 11 Apr 2024 00:13:13 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Last-Modified: Thu, 28 Mar 2024 16:11:47 GMT
+ETag: "117-614bac7b4c6ad"
+Accept-Ranges: bytes
+Content-Length: 279
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Servidor Web Apache</title>
+</head>
+<body>
+<h2>Bienvenidos al proyecto final de telematica 2</h2>
+<h3>Hecho por:</h3>
+<h4>Luis Miguel Giraldo</h4>
+<h4>Vanesa Velez</h4>
+<h4>Santiago Arias</h4>
+</body>
+</html>
+
+2024-04-10 19:13:46 HTTP Request: GET https://ministeriodeeducacion.gob.do/docs/biblioteca-virtual/4tXN-heidegger-martin-que-es-la-filosofiapdf.pdf Filename: 4tXN-heidegger-martin-que-es-la-filosofiapdf.pdf ContentType: application/pdf HTTP Response: BINARY CONTENT
+2024-04-10 19:14:27 HTTP Request: GET https://media.es.wired.com/photos/650b2a2e72d73ca3bd5ef0cc/16:9/w_2560%2Cc_limit/Business-OpenAI-Dall-E-3-heart.jpg Filename: Business-OpenAI-Dall-E-3-heart.jpg ContentType: image/jpeg HTTP Response: BINARY CONTENT
+2024-04-10 19:27:30 HTTP Request: GET http://18.235.48.199:8080/test/testt.html Filename: testt.html ContentType: text/html HTTP Response: HTTP/1.1 200 OK
+Date: Thu, 11 Apr 2024 00:27:28 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Last-Modified: Thu, 28 Mar 2024 16:11:31 GMT
+ETag: "118-614bac6c733f4"
+Accept-Ranges: bytes
+Content-Length: 280
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Servidor Web Apache</title>
+</head>
+<body>
+<h2>Bienvenidos al proyecto final de telematica 1</h2>
+<h3>Hecho por:</h3>
+<h4>Luis Miguel Giraldo</h4>
+<h4>Vanesa Velez</h4>
+<h4>Santiago Arias</h4>
+</body>
+</html>
+
+
+2024-04-10 19:28:25 HTTP Request: GET https://media.es.wired.com/photos/650b2a2e72d73ca3bd5ef0cc/16:9/w_2560%2Cc_limit/Business-OpenAI-Dall-E-3-heart.jpg Filename: Business-OpenAI-Dall-E-3-heart.jpg ContentType: image/jpeg HTTP Response: BINARY CONTENT
+2024-04-10 19:28:52 HTTP Request: GET https://ministeriodeeducacion.gob.do/docs/biblioteca-virtual/4tXN-heidegger-martin-que-es-la-filosofiapdf.pdf Filename: 4tXN-heidegger-martin-que-es-la-filosofiapdf.pdf ContentType: application/pdf HTTP Response: BINARY CONTENT
+2024-04-10 19:29:11 HTTP Request: HEAD http://18.235.48.199:8080/test/testt.html Filename: testt.html ContentType: text/html HTTP Response: HTTP/1.1 200 OK
+Date: Thu, 11 Apr 2024 00:29:10 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Last-Modified: Thu, 28 Mar 2024 16:11:47 GMT
+ETag: "117-614bac7b4c6ad"
+Accept-Ranges: bytes
+Content-Length: 279
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+
+
+2024-04-10 19:30:06 HTTP Request: POST http://18.235.48.199:8080/test/testt.html Filename: testt.html ContentType: text/html HTTP Response: HTTP/1.1 200 OK
+Date: Thu, 11 Apr 2024 00:30:05 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Last-Modified: Thu, 28 Mar 2024 16:12:16 GMT
+ETag: "117-614bac978dcbf"
+Accept-Ranges: bytes
+Content-Length: 279
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Servidor Web Apache</title>
+</head>
+<body>
+<h2>Bienvenidos al proyecto final de telematica 3</h2>
+<h3>Hecho por:</h3>
+<h4>Luis Miguel Giraldo</h4>
+<h4>Vanesa Velez</h4>
+<h4>Santiago Arias</h4>
+</body>
+</html>
+
