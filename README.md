@@ -1,5 +1,21 @@
 # Proxy Inverso y Balanceador de Carga para Aplicaciones HTTP
 
+
+# Tabla de Contenidos
+1. [Introducción](#introducción)
+2. [Flujo](#flujo)
+3. [Desarrollo](#Desarrollo-)
+   - [Servidor HTTP Proxy + Balanceador de Carga](#servidor-http-proxy--balanceador-de-carga)
+   - [Aplicación Cliente HTTP](#aplicación-cliente-http)
+   - [Servidores Web](#servidores-web)
+4. [Aspectos Logrados y No Logrados](#aspectos-logrados-y-no-logrados)
+   - [Aspectos Logrados](#aspectos-logrados-)
+   - [Aspectos No Logrados](#aspectos-no-logrados-)
+5. [Conclusiones](#conclusiones)
+6. [Referencias](#referencias)
+7. [Autores](#autores)
+
+
 ## Introducción
 El objetivo de este proyecto es implementar un proxy inverso para HTTP y un balanceador de carga utilizando la API Sockets, además de esto la implementación de una aplicación cliente y de 3 servidores web. De modo que el cliente se conecta con el proxy, el proxy inverso intercepta las peticiones de los clientes y las reenvía a servidores capaces de procesarlas, mientras que el balanceador de carga distribuye las peticiones entrantes entre un conjunto de servidores, mejorando así la eficiencia y disponibilidad del sistema. Es importante aclarar que el balanceo de carga se hace por medio del algoritmo de Round Robin.
 
