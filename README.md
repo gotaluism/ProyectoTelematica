@@ -1,26 +1,42 @@
 <h1 align="center">ST0255 TELEMÁTICA</h1>
 <h1 align="center">PROYECTO #1</h1>
 <h1 align="center">TEMÁTICA: PROGRAMACIÓN EN RED A PARTIR DE LA CREACIÓN DE UN PROXY INVERSO + BALANCEADOR DE CARGA Y CLIENTE</h1>
-## Link del video explicativo: [Video Explicativo](https://youtu.be/7tvadK4IWd4)
+
+## Video explicativo
+Link del video explicativo: https://youtu.be/7tvadK4IWd4
 
 
 ## Tabla de Contenidos
 - [Introducción](#introducción)
-- [Flujo](#flujo)
+- [Prerequisitos](#prerquisitos)
 - [Desarrollo](#desarrollo)
   - [Servidor HTTP Proxy + Balanceador de Carga](#servidor-http-proxy--balanceador-de-carga)
   - [Aplicación Cliente HTTP](#aplicación-cliente-http)
   - [Servidores Web](#servidores-web)
+- [Diagrama de flujo del proyecto ](#diagrama-de-flujo-del-proyecto)
 - [Aspectos Logrados y No Logrados](#aspectos-logrados-y-no-logrados)
 - [Conclusiones](#conclusiones)
 - [Referencias](#referencias)
 - [Autores](#autores)
 
-## Introducción
-El objetivo de este proyecto es implementar un proxy inverso para HTTP y un balanceador de carga utilizando la API Sockets, además de esto la implementación de una aplicación cliente y de 3 servidores web. De modo que el cliente se conecta con el proxy, el proxy inverso intercepta las peticiones de los clientes y las reenvía a servidores capaces de procesarlas, mientras que el balanceador de carga distribuye las peticiones entrantes entre un conjunto de servidores, mejorando así la eficiencia y disponibilidad del sistema. Es importante aclarar que el balanceo de carga se hace por medio del algoritmo de Round Robin.
 
-## Flujo
-![Diagrama flujo telematica drawio](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/92fb3079-6249-4685-a67b-9ecd1448f9a2)
+## Introducción
+
+Este proyecto se enmarca dentro de la asignatura de Telemática de la Universidad EAFIT. El propósito central del proyecto es desarrollar un sistema robusto que incluye un proxy inverso para HTTP y un balanceador de carga, aprovechando la API de Sockets para la creación de un protocolo de comunicación efectivo entre una aplicación cliente y múltiples servidores web.
+
+La implementación se centra en establecer un proxy inverso que actúa como intermediario entre el cliente y los servidores, interceptando todas las peticiones HTTP del cliente. Este proxy no solo redirige estas peticiones a los servidores que están en condiciones de procesarlas sino que también gestiona la respuesta hacia el cliente, optimizando el proceso mediante un algoritmo de balanceo de carga de Round Robin. Este método de distribución de carga se encarga de asignar las peticiones entrantes a diferentes servidores de forma rotativa y equitativa, lo que mejora significativamente la eficiencia y la disponibilidad del sistema.
+
+El escenario implementado contempla tres servidores web que funcionan en conjunto con el proxy y el balanceador para manejar las peticiones de manera distribuida usando round robin. Cada servidor aloja una copia idéntica de una página web, lo cual no solo simula un entorno de producción realista sino que también permite evaluar efectivamente la distribución de carga entre los diferentes nodos.
+
+Además, se desarrollará una aplicación cliente que permitirá realizar peticiones HTTP a cualquier servidor HTTP, incluido el servidor HTTP Proxy + Balanceador de Carga. Esta aplicación estará diseñada para enviar peticiones sin el uso de librerías especializadas, utilizando únicamente la funcionalidad proporcionada por la API de Sockets. La aplicación cliente se encargará de armar las peticiones HTTP y de procesar las respuestas del servidor, almacenándolas en un registro logístico para su revisión posterior. Esta capacidad permitirá un análisis detallado de la interacción entre el cliente y el servidor, facilitando una comprensión más profunda del flujo de datos y las operaciones de red.
+
+<p align="center">
+  <img src="https://github.com/gotaluism/ProyectoTelematica/assets/139718909/6a2a9f7e-c874-4cbc-b7a6-41e3cb278f92" alt="Diagrama de arquitectura del proyecto">
+</p>
+
+
+## Pre requisitos
+
 
 ## Desarrollo
 ### Servidor HTTP Proxy + Balanceador de Carga
@@ -42,6 +58,8 @@ La aplicación cliente permite realizar peticiones HTTP a cualquier servidor HTT
 ### Servidores Web
 Los servidores web se realizaron con Apache, cada servidor tiene una página estática en la cual hay un identificador con el cual se reconoce cuál de los 3 servidores web es. El servidor proxy es el que se encarga de redireccionar a uno de los 3 servidores web, no obstante, si deseas acceder a uno de los servidores web por aparte, puedes copiar la siguiente dirección en el buscador de tu preferencia:
 - `ipPublicaDeUnoDeLosServidoresWeb/test/testt.html`
+## Diagrama de flujo del proyecto
+![Diagrama flujo telematica drawio](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/92fb3079-6249-4685-a67b-9ecd1448f9a2)
 
 ## Aspectos Logrados y No Logrados
 ### Aspectos Logrados : ✔️
