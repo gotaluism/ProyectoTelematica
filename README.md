@@ -8,11 +8,11 @@ Link del video explicativo: https://youtu.be/7tvadK4IWd4
 
 ## Tabla de Contenidos
 - [Introducción](#introducción)
-- [Prerequisitos](#prerquisitos)
+- [Prerequisitos](#prerequisitos)
 - [Desarrollo](#desarrollo)
   - [Servidor HTTP Proxy + Balanceador de Carga](#servidor-http-proxy--balanceador-de-carga)
-  - [Aplicación Cliente HTTP](#aplicación-cliente-http)
   - [Servidores Web](#servidores-web)
+  - [Aplicación Cliente HTTP](#aplicación-cliente-http)
 - [Diagrama de flujo del proyecto ](#diagrama-de-flujo-del-proyecto)
 - [Aspectos Logrados y No Logrados](#aspectos-logrados-y-no-logrados)
 - [Conclusiones](#conclusiones)
@@ -35,7 +35,35 @@ Además, se desarrollará una aplicación cliente que permitirá realizar petici
 </p>
 
 
-## Pre requisitos
+## Prerequisitos
+
+Para llevar a cabo este proyecto con éxito, es esencial tener los siguientes prerrequisitos:
+
+1. **Conocimientos en Programación de Redes:**
+   - Entender el modelo cliente-servidor y el funcionamiento de las aplicaciones en red.
+   - Conocimientos fundamentales de TCP/IP y cómo se comunican las aplicaciones a través de Internet.
+
+2. **Experiencia en Programación:**
+   - Competencia en Python para el desarrollo del cliente HTTP. Familiaridad con la sintaxis básica y las bibliotecas de red, como `socket` , si se considera su uso.
+   - Habilidades en el lenguaje C para la implementación del servidor, dado que el servidor proxy y el balanceador de carga deben ser programados en C sin usar librerías externas para el procesamiento HTTP.
+
+3. **Manejo de Apache:**
+   - Experiencia en configurar y administrar servidores Apache. Conocimientos sobre cómo desplegar aplicaciones web y configurar aspectos como virtual hosts y módulos de Apache.
+
+4. **Uso de la API de Sockets:**
+   - Familiaridad con la API de Sockets de Berkeley, especialmente los sockets de tipo Stream (TCP) que son los que se usarán principalmente en este proyecto.
+   - Capacidad para implementar comunicaciones basadas en sockets en C y Python.
+
+5. **Entorno de Desarrollo:**
+   - Acceso a un entorno Linux para el desarrollo y pruebas del servidor, ya que la mayoría de los servidores web y de aplicaciones operan sobre sistemas UNIX-like.
+   - Configuración de un entorno Python para el desarrollo del cliente, incluyendo un editor o IDE que soporte Python y herramientas de debug.
+
+6. **Herramientas de Versionado:**
+   - Experiencia con sistemas de control de versiones como Git para manejar las versiones del código y colaborar entre los miembros del equipo.
+
+7. **Acceso a Servidores en la Nube:**
+   - Disponibilidad de servidores en la nube, como los proporcionados por AWS, para desplegar y probar los componentes del proyecto. Se requiere configurar y administrar máquinas virtuales para el proxy, el balanceador de carga, y los servidores web Apache.
+
 
 
 ## Desarrollo
@@ -47,6 +75,11 @@ El servidor se encarga de interceptar las peticiones de los clientes, reenviarla
 - Implementa un archivo de log para registrar todas las peticiones y respuestas.
 - Permite la caché de recursos solicitados por los clientes, almacenándolos en disco y estableciendo un Time To Live (TTL) configurable.
 
+
+### Servidores Web
+Los servidores web se realizaron con Apache, cada servidor tiene una página estática en la cual hay un identificador con el cual se reconoce cuál de los 3 servidores web es. El servidor proxy es el que se encarga de redireccionar a uno de los 3 servidores web, no obstante, si deseas acceder a uno de los servidores web por aparte, puedes copiar la siguiente dirección en el buscador de tu preferencia:
+- `ipPublicaDeUnoDeLosServidoresWeb/test/testt.html`
+
 ### Aplicación Cliente HTTP
 La aplicación cliente permite realizar peticiones HTTP a cualquier servidor HTTP, incluido el servidor HTTP Proxy + Balanceador de Carga.
 - `py cliente.py log.log url`
@@ -55,26 +88,45 @@ La aplicación cliente permite realizar peticiones HTTP a cualquier servidor HTT
   - La aplicación cliente puede realizar peticiones utilizando los métodos GET, HEAD y POST.
   - Ofrece la funcionalidad de caché de recursos solicitados, con la capacidad de eliminar completamente el caché mediante el comando flush.
 
-### Servidores Web
-Los servidores web se realizaron con Apache, cada servidor tiene una página estática en la cual hay un identificador con el cual se reconoce cuál de los 3 servidores web es. El servidor proxy es el que se encarga de redireccionar a uno de los 3 servidores web, no obstante, si deseas acceder a uno de los servidores web por aparte, puedes copiar la siguiente dirección en el buscador de tu preferencia:
-- `ipPublicaDeUnoDeLosServidoresWeb/test/testt.html`
 ## Diagrama de flujo del proyecto
-![Diagrama flujo telematica drawio](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/92fb3079-6249-4685-a67b-9ecd1448f9a2)
+De acuerdo al desarrollo esperado y explicado previamente, se espera que el proyecto se comporte de acuerdo al siguiente diagrama de flujo:
+
+  ![Diagrama flujo telematica drawio](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/92fb3079-6249-4685-a67b-9ecd1448f9a2)
 
 ## Aspectos Logrados y No Logrados
-### Aspectos Logrados : ✔️
-- Implementación funcional del servidor HTTP Proxy + Balanceador de Carga y la aplicación cliente.
-- Cumplimiento de los requisitos especificados, incluyendo el procesamiento de solicitudes HTTP/1.1, la implementación de métodos GET y HEAD y la modificación de las peticiones para enviar el encabezado pedido.
-- Implementación del caché (verifica primero si la respuesta está en el caché y si está devuelve esa).
-- Implementación del archivo log en donde se almacenan las solicitudes y las respuestas.
-- Mensajes con código de estado (error 500 en caso de solicitar un método no implementado).
-- Uso del algoritmo Round Robin para el balanceo de carga.
-- Implementación completa de la aplicación cliente con todos sus requerimientos, log, caché, uso de métodos de GET, HEAD e implementación de método POST, comando flush.
+A continuación se presenta una tabla de aspectos logrados y no logrados con respecto al proyecto la cual se ira actualizando durante el desarrollo para la verificación de el logro de los mismos.
 
-### Aspectos No Logrados : ❌
+| Aspecto |    Logrado| No logrado | Comentario|
+|-----------|-----------|-----------|-----------|
+| El cliente, HTTP Proxy + Balanceador de Carga + Servidor Web se comunican a través de los mensajes definidos para el protocolo HTTP/1.1.   | X    |       |       |
+| El servidor HTTP Proxy + Balanceador de Carga  permite interceptar una petición HTTP/1.1 y enviarla a un conjunto de servidores web que opera a nivel de back end.  | X      |       |       |
+| El servidor HTTP Proxy + Balanceador de carga está escrito en lenguaje de programación C    | X      |      |       |
+| El servidor escucha peticiones en el puerto 8080. Una vez reciba la petición de un cliente    | X      |       |     |
+| La aplicación HTTP Proxy + Balanceador de Carga implementa un archivo de “log” donde se registran todas las peticiones que recibe.    | X      |       |      |
+| El servidor HTTP Proxy + Balanceador de Carga es responsable de implementar los siguientes métodos GET Y HEAD   | X      |     |       |
+| La función de proxy debe permitir el caché para los diferentes recursos que se soliciten por parte de los clientes.    | X      |       |      |
+| Mensajes con código de estado (error 500 en caso de solicitar un método no implementado)   | X      |       |       |
+| Uso el proxy hace uso del algoritmo Round Robin para el balanceo de carga   | X      |       |       |
+| El servidor proxy se ejecuta de la siguiente manera /httproxy <port> </path/log.log>   | X      |       |       |
+| La aplicación cliente se ejecuta de la siguiente forma ./httpclient </path/log.log> <url:port>  | X      |       |       |
+| La aplicación cliente cuenta con un archivo log donde se registran las peticiones en la forma <date> <time> <http_request> <http_response>   | X      |       |       |
+| La aplicación cliente, puede consultar cualquier recurso web vía HTTP   | X      |      |      |
+| La aplicación cliente permite alamcenar archivos de la web como imágenes (png, jpeg), documentos (pdf,docx,ppt,xls), videos (mpeg, mov), etc | X      |       |       |
+| La aplicación cliente permite visualizar en consola los textos extraidos de la web  | X      |      |      |
+| La aplicación cliente es capaz de realizarpeticiones empleando los métodos GET, HEAD y POST    |  X   |      |      |
+| La alpicación cliente cuenta con un cache persistente el cual permite almacenar las ultimas consultas realizadas y ademas permite revisar si ya se han hecho para cargarlas desde este cache  | X      |   |   |
+| La aplicación cliente cuenta con un comando flush para eliminar el cache   | X      |      |      |
+
+
+
 
 ## Conclusiones
-El proyecto ha permitido adquirir conocimientos sólidos en el diseño y desarrollo de aplicaciones concurrentes en red, así como en el manejo de peticiones HTTP y la implementación de servidores proxy y balanceadores de carga. Se han alcanzado los objetivos principales del proyecto, aunque quedan algunos aspectos que fueron complicados de desarrollar debido al impedimento que teníamos respecto al uso de algunas librerías.
+- El sistema de caché hace que las cosas vayan más rápido al guardar temporalmente las respuestas comunes, así el servidor no tiene que hacer el mismo trabajo una y otra vez. El uso de un algoritmo de hash para generar identificadores únicos y un control de tiempo de vida (TTL) garantiza una gestión eficiente y efectiva de las entradas en caché.
+- El registro de logs es como la "agenda" de nuestro servidor, donde se anotan todas las solicitudes que llegan y las respuestas que enviamos. Es como llevar un registro de lo que pasa en la aplicación. Esto nos ayuda a solucionar problemas más fácilmente y a entender cómo se comporta el sistema con los usuarios. Así podemos asegurarnos de que todo funciona bien y mejorar en el futuro.
+- Para poder navegar en internet con el cliente se debe de envolver el socket con SSL y que así los sitios seguros acepten la conexión.
+- Al servir documentos HTML en UTF-8, es crucial especificar correctamente la codificación en las cabeceras HTTP y en las etiquetas meta del HTML de lo contrario va a dar un error no relacionado con respecto a los caracteres llevando a una incorrecta visualización.
+- Se he aprendido el uso del manejo de los servidores web, los cuales mediante apache permitieron renderizar las paginas estáticas.
+- Se obtuvieron muchos conocimientos solidos acerca de la estructura para construir una aplicación concurrente de red, desde los sockets, hasta los diversos servidores que se construyeron para llevar exitosamente este proyecto.
 
 ## Referencias
 - Python, R. (2023, 16 noviembre). Socket Programming in Python (Guide). https://realpython.com/python-sockets/
