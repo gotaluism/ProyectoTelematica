@@ -100,17 +100,6 @@ En caso de querer hacer cambios en el código de nuestro servidor haremos lo sig
 - Acá ya está en funcionamiento nuestro servidor proxy y se vería algo así:
 ![image](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/66d737b5-1f1c-4be3-898a-0eef79d5dee0)
 
-
-#### Probar su funcionamiento (sin tener en cuenta el cliente)
-
-- Nos dirigmos a Postman y copiamos la siguiente url:
-```
-http://18.235.48.199:8080/test/testt.html
-
-```
-- En el método ponemos "GET" o "HEAD" y le damos en "Send".
-
-
 #### Para acceder al caché y a los archivos que nos cree
 - Nos dirigimos a la consola de nuestro servidor y copiamos el comando `ls` para verificar que estamos en la misma ruta de nuestro caché.
 - Nos debería de aparecer la carpeta "caché", accedemos a ella con el comando `cd cache`.
@@ -124,6 +113,18 @@ http://18.235.48.199:8080/test/testt.html
 ![image](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/5f14ff5e-62e3-43fc-b3d6-10f6161c01c2)
 
 El contenido de la respuesta se encuentra encriptado con gzip.
+
+#### Probar su funcionamiento (sin tener en cuenta el cliente)
+
+- Nos dirigmos a Postman y copiamos la siguiente url:
+```
+http://18.235.48.199:8080/test/testt.html
+
+```
+- En el método ponemos "GET" o "HEAD" y le damos en "Send".
+
+
+
 ### Servidores Web
 Los servidores web se realizaron con Apache, cada servidor tiene una página estática en la cual hay un identificador con el cual se reconoce cuál de los 3 servidores web es. El servidor proxy es el que se encarga de redireccionar a uno de los 3 servidores web, no obstante, si deseas acceder a uno de los servidores web por aparte, puedes copiar la siguiente dirección en el buscador de tu preferencia:
 - `ipPublicaDeUnoDeLosServidoresWeb/test/testt.html`
