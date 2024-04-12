@@ -77,6 +77,15 @@ El servidor se encarga de interceptar las peticiones de los clientes, reenviarla
 - Implementa un archivo de log para registrar todas las peticiones y respuestas.
 - Permite la caché de recursos solicitados por los clientes, almacenándolos en disco y estableciendo un Time To Live (TTL) configurable.
 
+#### Para tener en cuenta
+Para el correcto funcionamiento de nuestro servidor, debemos cambiar en nuestro código las ips de nuestros 3 servidores web
+![image](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/041c3aee-f049-493b-a85b-5d741fbb22b8)
+Para estso haremos lo siguiente:
+- Nos dirigimos a cada instancia de nuestros servidores web, le damos en conectar y copiamos la ip pública que nos entregan
+- ![image](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/4421228b-3c4e-4719-8b9b-ca7e6b7ca542)
+- Posteriormente en nuestro código vamos reemplazando cada ip (primero va la ip servidor 1, después 2 y por ultimo la del servidor 3)
+- Ya todo estaría listo para el funcionamiento
+
 
 En caso de querer hacer cambios en el código de nuestro servidor haremos lo siguiente:
  `sudo nano Servidor.c`
@@ -91,7 +100,13 @@ En caso de querer hacer cambios en el código de nuestro servidor haremos lo sig
 ![image](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/66d737b5-1f1c-4be3-898a-0eef79d5dee0)
 
 
+#### Probar su funcionamiento (sin tener en cuenta el cliente)
 
+- Nos dirigmos a Postman y copiamos la siguiente url:
+```
+http://18.235.48.199:8080/test/testt.html
+
+```
 ### Servidores Web
 Los servidores web se realizaron con Apache, cada servidor tiene una página estática en la cual hay un identificador con el cual se reconoce cuál de los 3 servidores web es. El servidor proxy es el que se encarga de redireccionar a uno de los 3 servidores web, no obstante, si deseas acceder a uno de los servidores web por aparte, puedes copiar la siguiente dirección en el buscador de tu preferencia:
 - `ipPublicaDeUnoDeLosServidoresWeb/test/testt.html`
