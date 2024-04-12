@@ -79,15 +79,15 @@ El servidor se encarga de interceptar las peticiones de los clientes, reenviarla
 
 
 En caso de querer hacer cambios en el código de nuestro servidor haremos lo siguiente:
-- `sudo nano Servidor.c`
-En este punto ya podemos editar y guardamos con Ctrl+O y nos salimos con Ctrl+X
+ `sudo nano Servidor.c`
+- En este punto ya podemos editar y guardamos con Ctrl+O y nos salimos con Ctrl+X
 
-Para compilar nuestros cambios realizamos el siguiente comando:
+- Para compilar nuestros cambios realizamos el siguiente comando:
 `gcc Servidor.c -o servidor -lcrypto`
 
-Para su ejecución nos dirigimos a nuestra instancia "My First Instance" en AWS y le damos en conectar. Posterior a esto copiamos el siguiente comando
+- Para su ejecución nos dirigimos a nuestra instancia "My First Instance" en AWS y le damos en conectar. Posterior a esto copiamos el siguiente comando
 `sudo ./servidor`
-Acá ya está en funcionamiento nuestro servidor proxy y se vería algo así:
+- Acá ya está en funcionamiento nuestro servidor proxy y se vería algo así:
 ![image](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/66d737b5-1f1c-4be3-898a-0eef79d5dee0)
 
 
