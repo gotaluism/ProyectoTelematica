@@ -81,12 +81,56 @@ Los servidores web se realizaron con Apache, cada servidor tiene una página est
 - `ipPublicaDeUnoDeLosServidoresWeb/test/testt.html`
 
 ### Aplicación Cliente HTTP
-La aplicación cliente permite realizar peticiones HTTP a cualquier servidor HTTP, incluido el servidor HTTP Proxy + Balanceador de Carga.
-- `py cliente.py log.log url`
-  - url: URL del recurso que deseamos solicitar.
+La aplicación cliente debe permitir realizar peticiones HTTP a cualquier servidor HTTP, incluido el servidor HTTP Proxy + Balanceador de Carga.
   - Permite registrar todas las peticiones realizadas en un archivo de log, que incluye información sobre la fecha, hora, tipo de solicitud HTTP y respuesta recibida del servidor/proxy. 
   - La aplicación cliente puede realizar peticiones utilizando los métodos GET, HEAD y POST.
   - Ofrece la funcionalidad de caché de recursos solicitados, con la capacidad de eliminar completamente el caché mediante el comando flush.
+#### ¿Como se desarrollo? :
+- Se uso `python` con la versión `3.10.9`
+- El archivo que contiene el codigo de la aplicación cliente el cual esta 100% comentado se llama `cliente.py`
+
+- El codigo se ejecuta de la siguiente manera :
+  
+```
+py cliente.py log.log  URL PUERTO METODO
+
+```
+Si se escribe mal el programa indica la correcta escritura:
+![image](https://github.com/gotaluism/ProyectoTelematica/assets/139718909/22aa44cd-58ad-4733-ba8e-25c738c0a269)
+
+- Para ejecutar el comando flush
+```
+py cliente.py flush
+
+```
+El comando avisa que la cache ha sido limpiada: 
+
+![image](https://github.com/gotaluism/ProyectoTelematica/assets/139718909/aa5e53a3-374d-46a1-bfb3-52313397b6d3)
+
+- Así se observa una petición en el log:
+  
+  ![image](https://github.com/gotaluism/ProyectoTelematica/assets/139718909/e7dea5bc-3bac-4fe8-baad-9a5082895ad0)
+- Así se observa una petición en el cache:
+  
+  ![image](https://github.com/gotaluism/ProyectoTelematica/assets/139718909/f6793f90-4bf2-4e97-84ee-93423473452d)
+
+  #### Ejemplos de como probar el codigo:
+- Para una imagen (notese que si el puerto no está definido en la url el asigna uno por defecto):
+```
+py cliente.py log.log  https://media.es.wired.com/photos/650b2a2e72d73ca3bd5ef0cc/16:9/w_2560%2Cc_limit/Business-OpenAI-Dall-E-3-heart.jpg  GET
+
+```
+- Para un archivo:
+```
+py cliente.py log.log https://ministeriodeeducacion.gob.do/docs/biblioteca-virtual/4tXN-heidegger-martin-que-es-la-filosofiapdf.pdf GET
+
+```
+- Para el proxy elaborado (cuando el metodo es POST debe de ir una palabra para que el servidor la reciba):
+```
+py cliente.py log.log  http://18.235.48.199:8080/test/testt.html POST hola
+
+```
+
 
 ## Diagrama de flujo del proyecto
 De acuerdo al desarrollo esperado y explicado previamente, se espera que el proyecto se comporte de acuerdo al siguiente diagrama de flujo:
