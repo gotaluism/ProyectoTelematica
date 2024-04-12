@@ -80,13 +80,14 @@ El servidor se encarga de interceptar las peticiones de los clientes, reenviarla
 #### Para tener en cuenta
 Para el correcto funcionamiento de nuestro servidor, debemos cambiar en nuestro código las ips de nuestros 3 servidores web
 ![image](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/041c3aee-f049-493b-a85b-5d741fbb22b8)
-Para estso haremos lo siguiente:
+- Para estso haremos lo siguiente:
 - Nos dirigimos a cada instancia de nuestros servidores web, le damos en conectar y copiamos la ip pública que nos entregan
 - ![image](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/4421228b-3c4e-4719-8b9b-ca7e6b7ca542)
 - Posteriormente en nuestro código vamos reemplazando cada ip (primero va la ip servidor 1, después 2 y por ultimo la del servidor 3)
 - Ya todo estaría listo para el funcionamiento
 
 
+#### Hacer cambios en el código del servidor
 En caso de querer hacer cambios en el código de nuestro servidor haremos lo siguiente:
  `sudo nano Servidor.c`
 - En este punto ya podemos editar y guardamos con Ctrl+O y nos salimos con Ctrl+X
