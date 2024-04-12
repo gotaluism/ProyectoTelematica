@@ -68,7 +68,7 @@ Para llevar a cabo este proyecto con éxito, es esencial tener los siguientes pr
 
 ## Desarrollo
 ### Servidor HTTP Proxy + Balanceador de Carga
-Nuestro servidor proxy fue desarrollado en el lenguaje de programación C, con el uso de la librería de Socket de Berkeley.
+Nuestro servidor proxy fue desarrollado en el lenguaje de programación C, con el uso de la librería de Socket de Berkeley.El codigo 100% comentado se encuentra en el archivo `servidor_10.c`
 
 El servidor se encarga de interceptar las peticiones de los clientes, reenviarlas a servidores destino seleccionados mediante el algoritmo de Round Robin, procesar las respuestas y retornarlas a los clientes. Se han implementado los siguientes aspectos:
 - Escucha peticiones en el puerto 8080 y procesa solicitudes HTTP/1.1.
