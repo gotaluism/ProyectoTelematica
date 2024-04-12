@@ -85,7 +85,7 @@ La aplicación cliente debe permitir realizar peticiones HTTP a cualquier servid
   - Permite registrar todas las peticiones realizadas en un archivo de log, que incluye información sobre la fecha, hora, tipo de solicitud HTTP y respuesta recibida del servidor/proxy. 
   - La aplicación cliente puede realizar peticiones utilizando los métodos GET, HEAD y POST.
   - Ofrece la funcionalidad de caché de recursos solicitados, con la capacidad de eliminar completamente el caché mediante el comando flush.
-#### ¿Como se desarrollo? :
+#### ¿Como se desarrolló? :
 - Se uso `python` con la versión `3.10.9`
 - El archivo que contiene el codigo de la aplicación cliente el cual esta 100% comentado se llama `cliente.py`
 
