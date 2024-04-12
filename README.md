@@ -68,12 +68,28 @@ Para llevar a cabo este proyecto con éxito, es esencial tener los siguientes pr
 
 ## Desarrollo
 ### Servidor HTTP Proxy + Balanceador de Carga
+Nuestro servidor proxy fue desarrollado en el lenguaje de programación C, con el uso de la librería de Socket de Berkeley.
+
 El servidor se encarga de interceptar las peticiones de los clientes, reenviarlas a servidores destino seleccionados mediante el algoritmo de Round Robin, procesar las respuestas y retornarlas a los clientes. Se han implementado los siguientes aspectos:
 - Escucha peticiones en el puerto 8080 y procesa solicitudes HTTP/1.1.
 - Implementa los métodos GET y HEAD.
 - Modifica las peticiones para enviarlas al servidor destino de forma adecuada.
 - Implementa un archivo de log para registrar todas las peticiones y respuestas.
 - Permite la caché de recursos solicitados por los clientes, almacenándolos en disco y estableciendo un Time To Live (TTL) configurable.
+
+
+En caso de querer hacer cambios en el código de nuestro servidor haremos lo siguiente:
+- `sudo nano Servidor.c`
+En este punto ya podemos editar y guardamos con Ctrl+O y nos salimos con Ctrl+X
+
+Para compilar nuestros cambios realizamos el siguiente comando:
+`gcc Servidor.c -o servidor -lcrypto`
+
+Para su ejecución nos dirigimos a nuestra instancia "My First Instance" en AWS y le damos en conectar. Posterior a esto copiamos el siguiente comando
+`sudo ./servidor`
+Acá ya está en funcionamiento nuestro servidor proxy y se vería algo así:
+![image](https://github.com/gotaluism/ProyectoTelematica/assets/88945658/66d737b5-1f1c-4be3-898a-0eef79d5dee0)
+
 
 
 ### Servidores Web
