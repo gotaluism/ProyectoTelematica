@@ -126,7 +126,19 @@ http://18.235.48.199:8080/test/testt.html
 
 
 ### Servidores Web
-Los servidores web se realizaron con Apache, cada servidor tiene una página estática en la cual hay un identificador con el cual se reconoce cuál de los 3 servidores web es. El servidor proxy es el que se encarga de redireccionar a uno de los 3 servidores web, no obstante, si deseas acceder a uno de los servidores web por aparte, puedes copiar la siguiente dirección en el buscador de tu preferencia:
+Los servidores web se realizaron con Apache, cada servidor tiene una página estática en la cual hay un identificador con el cual se reconoce cuál de los 3 servidores web es. El servidor proxy es el que se encarga de redireccionar a uno de los 3 servidores web, no obstante. 
+
+Para descargar apache en los 3 servidores web
+```
+sudo apt-get install apache2
+```
+
+Para inicializar apache en los 3 servidores web
+```
+sudo systemctl start apache2
+```
+
+Y por ultimo, si deseas acceder a uno de los servidores web por aparte desde el motor de busqueda de tu preferencia, puedes copiar la siguiente dirección (con la respectiva IP):
 - `ipPublicaDeUnoDeLosServidoresWeb/test/testt.html`
 
 ### Aplicación Cliente HTTP
